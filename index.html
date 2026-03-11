@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engr. Aslam Sikder | AI Engineer & Researcher</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0f172a',
+                        deepblue: '#1e3a8a',
+                        electric: '#3b82f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-navy text-white font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-navy/80 border-b border-white/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="text-2xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-electric to-blue-300">
+                    ASLAM<span class="text-white">.AI</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-electric transition-colors">About</a>
+                    <a href="#skills" class="hover:text-electric transition-colors">Skills</a>
+                    <a href="#experience" class="hover:text-electric transition-colors">Experience</a>
+                    <a href="#projects" class="hover:text-electric transition-colors">Projects</a>
+                    <a href="#research" class="hover:text-electric transition-colors">Research</a>
+                    <a href="#contact" class="hover:text-electric transition-colors">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-navy/95 backdrop-blur-md absolute w-full border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#about" class="block px-3 py-2 hover:text-electric">About</a>
+                <a href="#skills" class="block px-3 py-2 hover:text-electric">Skills</a>
+                <a href="#experience" class="block px-3 py-2 hover:text-electric">Experience</a>
+                <a href="#projects" class="block px-3 py-2 hover:text-electric">Projects</a>
+                <a href="#research" class="block px-3 py-2 hover:text-electric">Research</a>
+                <a href="#contact" class="block px-3 py-2 hover:text-electric">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-navy/90 z-10"></div>
+        
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                <p class="text-electric font-semibold mb-2 tracking-wide uppercase">Hello, I am</p>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">Engr. Aslam <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-electric to-blue-300">Sikder</span></h1>
+                <h2 class="text-2xl md:text-3xl font-medium text-gray-300 mb-6 h-10">
+                    <span id="typed-text"></span>
+                </h2>
+                <p class="text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 text-lg">
+                    Results-driven AI Engineer, Researcher, and Educator specializing in building scalable intelligent systems and optimizing models for real-world deployment.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="px-8 py-3 rounded-full bg-electric text-white font-semibold hover:bg-blue-600 transition-all shadow-[0_0_15px_rgba(59,130,246,0.5)] hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] transform hover:-translate-y-1">
+                        Contact Me
+                    </a>
+                    <a href="#" class="px-8 py-3 rounded-full bg-transparent border border-electric text-electric font-semibold hover:bg-electric/10 transition-all">
+                        Download CV
+                    </a>
+                </div>
+                <div class="mt-8 flex gap-6 justify-center md:justify-start">
+                    <a href="https://github.com/aslamsikder" target="_blank" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/aslamsikder" target="_blank" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:aslamsikder.edu@gmail.com" class="text-gray-400 hover:text-white text-2xl transition-colors"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center md:justify-end z-20" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-2 border-2 border-electric/30 shadow-[0_0_50px_rgba(59,130,246,0.3)] bg-navy/50 backdrop-blur-sm group">
+                    <img src="profile.png" alt="Engr. Aslam Sikder" class="rounded-full w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://ui-avatars.com/api/?name=Aslam+Sikder&background=0f172a&color=3b82f6&size=512'">
+                    <div class="absolute inset-0 rounded-full shadow-[inset_0_0_30px_rgba(15,23,42,0.8)] pointer-events-none"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+            <a href="#about" class="text-gray-400 hover:text-electric transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-navy">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold inline-block border-b-4 border-electric pb-2">About Me</h2>
+            </div>
+            <div class="glass-card rounded-2xl p-8 md:p-12 relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute top-0 left-0 w-2 h-full bg-electric"></div>
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="md:w-2/3">
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            I am a results-driven AI Engineer, Researcher, and Educator with approximately 5 years of blended industry and academic experience. Based in Dhaka, Bangladesh, my core mission is to bridge the gap between cutting-edge AI research and practical, scalable industry solutions.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            My expertise spans <strong class="text-electric font-medium">Edge AI, Agentic AI, Multimodal RAG, Computer Vision, Generative AI, and Transformer architectures</strong>. I have hands-on experience in building scalable intelligent systems and optimizing models for GPU and NPU acceleration.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            My ongoing research interests focus deeply on efficient LLMs, on-device machine learning, multimodal intelligence, and explainable AI, continuously striving to make AI more accessible, efficient, and transparent.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 w-full grid grid-cols-2 gap-4">
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700 text-center hover:border-electric transition-colors">
+                            <i class="fas fa-microchip text-3xl text-electric mb-2"></i>
+                            <h4 class="font-semibold">Edge AI</h4>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700 text-center hover:border-electric transition-colors">
+                            <i class="fas fa-brain text-3xl text-electric mb-2"></i>
+                            <h4 class="font-semibold">Agentic AI</h4>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700 text-center hover:border-electric transition-colors">
+                            <i class="fas fa-eye text-3xl text-electric mb-2"></i>
+                            <h4 class="font-semibold">Computer Vision</h4>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700 text-center hover:border-electric transition-colors">
+                            <i class="fas fa-language text-3xl text-electric mb-2"></i>
+                            <h4 class="font-semibold">NLP & LLMs</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-slate-900/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold inline-block border-b-4 border-electric pb-2">Technical Skills</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-semibold mb-4 text-electric border-b border-slate-700 pb-2"><i class="fas fa-code mr-2"></i>Programming</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C / C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-4 text-electric border-b border-slate-700 pb-2"><i class="fas fa-cubes mr-2"></i>AI Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">LangChain</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-semibold mb-4 text-electric border-b border-slate-700 pb-2"><i class="fas fa-network-wired mr-2"></i>Deep Learning</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">CNN</span>
+                        <span class="skill-tag">RNN & LSTM</span>
+                        <span class="skill-tag">Vision Transformers</span>
+                        <span class="skill-tag">TabTransformer</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl font-semibold mb-4 text-electric border-b border-slate-700 pb-2"><i class="fas fa-globe mr-2"></i>AI Domains</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">NLP</span>
+                        <span class="skill-tag">Edge AI</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">Agentic AI</span>
+                        <span class="skill-tag">RAG Systems</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="500">
+                    <h3 class="text-xl font-semibold mb-4 text-electric border-b border-slate-700 pb-2"><i class="fas fa-toolbox mr-2"></i>Tools & Libraries</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Linux / Ubuntu</span>
+                        <span class="skill-tag">Pandas / NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="600">
+                    <h3 class="text-xl font-semibold mb-4 text-electric border-b border-slate-700 pb-2"><i class="fas fa-cloud mr-2"></i>Cloud & Deployment</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">API Deployment</span>
+                        <span class="skill-tag">Model Quantization</span>
+                        <span class="skill-tag">GPU/NPU Optimization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-navy">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold inline-block border-b-4 border-electric pb-2">Professional Experience</h2>
+            </div>
+            
+            <div class="relative border-l-2 border-slate-700 ml-3 md:ml-0">
+                
+                <div class="mb-10 ml-8 md:ml-10 relative" data-aos="fade-right">
+                    <div class="absolute -left-[41px] md:-left-[49px] top-1 w-6 h-6 bg-electric rounded-full border-4 border-navy shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Senior AI Engineer</h3>
+                                <h4 class="text-lg text-electric">SmartData Technologies Ltd | Dhaka, Bangladesh</h4>
+                            </div>
+                            <span class="text-gray-400 bg-slate-800 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 inline-block w-max">Dec 2025 – Present</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Architecting and deploying <strong class="text-white">Edge AI systems</strong> and Computer Vision solutions.</li>
+                            <li>Developing advanced Vision-Language Models and Multimodal RAG pipelines.</li>
+                            <li>Building Generative AI systems and optimizing deep learning models for GPU and NPU acceleration.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-10 ml-8 md:ml-10 relative" data-aos="fade-right" data-aos-delay="100">
+                    <div class="absolute -left-[41px] md:-left-[49px] top-1 w-6 h-6 bg-slate-600 rounded-full border-4 border-navy"></div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">AI Researcher</h3>
+                                <h4 class="text-lg text-electric">Elite Research Lab LLC & AI/ML Community BD</h4>
+                            </div>
+                            <span class="text-gray-400 bg-slate-800 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 inline-block w-max">July 2025 – Present</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Conducting research on Efficient AI Inference and Model Quantization.</li>
+                            <li>Publishing datasets and contributing to the open-source NLP and Agentic AI community.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-10 ml-8 md:ml-10 relative" data-aos="fade-right" data-aos-delay="200">
+                    <div class="absolute -left-[41px] md:-left-[49px] top-1 w-6 h-6 bg-slate-600 rounded-full border-4 border-navy"></div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Assistant Professor & Head of CSE</h3>
+                                <h4 class="text-lg text-electric">Academic Institutions</h4>
+                            </div>
+                            <span class="text-gray-400 bg-slate-800 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 inline-block w-max">Previous Roles</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Led the Computer Science & Engineering department, shaping technical curriculum.</li>
+                            <li>Educated and mentored students in programming, algorithms, and applied machine learning.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold inline-block border-b-4 border-electric pb-2">Featured Projects</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card rounded-xl overflow-hidden group" data-aos="zoom-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-900 to-navy relative overflow-hidden flex items-center justify-center">
+                        <i class="fas fa-video text-6xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+                        <div class="absolute inset-0 bg-electric/20 group-hover:bg-electric/10 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">Edge AI Video Management System (VMS)</h3>
+                            <a href="https://github.com/aslamsikder" target="_blank" class="text-gray-400 hover:text-electric text-xl"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-gray-400 mb-4 text-sm h-16">Developed a scalable VMS leveraging the DeepX DX-M1 AI chip on a Rock Pi 5B+ board for real-time on-device video analytics and object tracking.</p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Edge AI</span>
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">DeepX DX-M1</span>
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Computer Vision</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl overflow-hidden group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-indigo-900 to-navy relative overflow-hidden flex items-center justify-center">
+                        <i class="fas fa-notes-medical text-6xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">Medical Dialogue to SOAP Summary</h3>
+                            <a href="https://github.com/aslamsikder" target="_blank" class="text-gray-400 hover:text-electric text-xl"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-gray-400 mb-4 text-sm h-16">Curated and published a custom 3,000-sample NLP dataset on Hugging Face to fine-tune LLMs for generating clinical SOAP notes from medical dialogues.</p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">NLP / LLMs</span>
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Hugging Face</span>
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Generative AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl overflow-hidden group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-slate-800 to-navy relative overflow-hidden flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-6xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">Online Shoppers' Purchase Intention</h3>
+                            <a href="https://github.com/aslamsikder" target="_blank" class="text-gray-400 hover:text-electric text-xl"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-gray-400 mb-4 text-sm h-16">Applied machine learning algorithms to predict user purchase intent based on session data, optimizing e-commerce conversion pipelines.</p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Machine Learning</span>
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Scikit-learn</span>
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-xl overflow-hidden group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="h-48 bg-gradient-to-br from-blue-800 to-navy relative overflow-hidden flex items-center justify-center">
+                        <i class="fas fa-camera text-6xl text-white/20 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white">YOLO Object & Face Analytics</h3>
+                            <a href="https://github.com/aslamsikder" target="_blank" class="text-gray-400 hover:text-electric text-xl"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-gray-400 mb-4 text-sm h-16">Implemented robust computer vision models using YOLO architectures for precise vehicle detection and detailed facial analytics in live streams.</p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">Computer Vision</span>
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">YOLO</span>
+                            <span class="bg-blue-900/50 text-blue-300 px-2 py-1 rounded">PyTorch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="py-20 bg-navy relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-8 border-b-2 border-slate-700 pb-2 inline-block"><i class="fas fa-flask text-electric mr-3"></i>Research Focus</h2>
+                    <div class="glass-card p-8 rounded-2xl">
+                        <p class="text-gray-300 mb-6">Actively exploring the intersection of lightweight architectures and multimodal understanding to build smarter, independent AI systems.</p>
+                        <div class="flex flex-wrap gap-3 mb-8">
+                            <span class="bg-slate-800 border border-slate-600 px-4 py-2 rounded-full text-sm">Edge AI</span>
+                            <span class="bg-slate-800 border border-slate-600 px-4 py-2 rounded-full text-sm">Agentic AI</span>
+                            <span class="bg-slate-800 border border-slate-600 px-4 py-2 rounded-full text-sm">Multimodal RAG</span>
+                            <span class="bg-slate-800 border border-slate-600 px-4 py-2 rounded-full text-sm">On-device LLMs & SLMs</span>
+                            <span class="bg-slate-800 border border-slate-600 px-4 py-2 rounded-full text-sm">Vision Transformers</span>
+                            <span class="bg-slate-800 border border-slate-600 px-4 py-2 rounded-full text-sm">Explainable AI</span>
+                            <span class="bg-slate-800 border border-slate-600 px-4 py-2 rounded-full text-sm">Multi-Agent Systems</span>
+                        </div>
+                        <a href="https://scholar.google.com/" target="_blank" class="inline-flex items-center gap-2 text-electric hover:text-white transition-colors font-medium">
+                            <i class="fas fa-graduation-cap text-xl"></i> View Google Scholar Profile <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-8 border-b-2 border-slate-700 pb-2 inline-block"><i class="fas fa-university text-electric mr-3"></i>Education</h2>
+                    <div class="space-y-6">
+                        <div class="glass-card p-6 rounded-xl relative overflow-hidden group">
+                            <div class="absolute left-0 top-0 w-1 h-full bg-electric group-hover:w-2 transition-all"></div>
+                            <div class="ml-2">
+                                <h3 class="text-xl font-bold text-white mb-1">MSc in Computer Science & Engineering</h3>
+                                <h4 class="text-gray-400 mb-2">Dhaka University of Engineering & Technology (DUET)</h4>
+                                <div class="flex justify-between text-sm text-electric font-medium">
+                                    <span>GPA: 3.42 / 4.00</span>
+                                    <span>Graduated: 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl relative overflow-hidden group">
+                            <div class="absolute left-0 top-0 w-1 h-full bg-slate-600 group-hover:w-2 group-hover:bg-electric transition-all"></div>
+                            <div class="ml-2">
+                                <h3 class="text-xl font-bold text-white mb-1">BSc in Computer Science & Engineering</h3>
+                                <h4 class="text-gray-400 mb-2">Southeast University</h4>
+                                <div class="flex justify-between text-sm text-electric font-medium">
+                                    <span>GPA: 3.75 / 4.00</span>
+                                    <span>Graduated: 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold inline-block border-b-4 border-electric pb-2">Get In Touch</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Whether you have an interesting project, a research collaboration idea, or just want to say hi, feel free to drop a message.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-10">
+                <div class="md:col-span-2 space-y-6" data-aos="fade-right">
+                    <div class="glass-card p-6 rounded-xl flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-900/50 rounded-full flex items-center justify-center text-electric text-xl shrink-0">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-gray-400 text-sm uppercase tracking-wider">Location</h4>
+                            <p class="text-white font-medium">Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                    
+                    <a href="mailto:aslamsikder.edu@gmail.com" class="glass-card p-6 rounded-xl flex items-center gap-4 hover:border-electric transition-colors block">
+                        <div class="w-12 h-12 bg-blue-900/50 rounded-full flex items-center justify-center text-electric text-xl shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-gray-400 text-sm uppercase tracking-wider">Email</h4>
+                            <p class="text-white font-medium truncate">aslamsikder.edu@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <div class="glass-card p-6 rounded-xl flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-900/50 rounded-full flex items-center justify-center text-electric text-xl shrink-0">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-gray-400 text-sm uppercase tracking-wider">Phone</h4>
+                            <p class="text-white font-medium">+880 1567 970314</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3 glass-card p-8 rounded-xl" data-aos="fade-left">
+                    <form onsubmit="event.preventDefault(); alert('Form submission simulated! Connect backend (e.g., Formspree) to enable emails.');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-400 text-sm mb-2" for="name">Your Name</label>
+                                <input type="text" id="name" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-electric transition-colors" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-400 text-sm mb-2" for="email">Your Email</label>
+                                <input type="email" id="email" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-electric transition-colors" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-400 text-sm mb-2" for="subject">Subject</label>
+                            <input type="text" id="subject" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-electric transition-colors" placeholder="Collaboration / Project Inquiry" required>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-400 text-sm mb-2" for="message">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-electric transition-colors resize-none" placeholder="Hello Aslam, I would like to discuss..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-electric hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy border-t border-white/10 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-center md:text-left">
+                <p class="text-gray-400">© 2026 Engr. Aslam Sikder. All rights reserved.</p>
+                <p class="text-sm text-gray-500 mt-1">AI Engineer & Researcher</p>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://github.com/aslamsikder" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-electric transition-all"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/aslamsikder" target="_blank" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-electric transition-all"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
